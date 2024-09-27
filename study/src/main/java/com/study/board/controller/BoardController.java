@@ -1,10 +1,10 @@
 package com.study.board.controller;
 
+import com.study.board.entity.Board;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class BoardController {
@@ -16,10 +16,10 @@ public class BoardController {
     }
 
     @PostMapping("/board/writepro")
-    public String boardWritePro(@RequestParam("title") String title, @RequestParam("content") String content) {
+    public String boardWritePro(Board board) {
 
-        System.out.println("제목 : " + title);
-        System.out.println("내용 : " + content);
+        System.out.println("제목 : " + board.getTitle());
+        System.out.println("내용 : " + board.getContent());
 
         return "";
     }
