@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 페이지</title>
+</head>
+
+<style>
+    .layout {
+        width : 400px;
+        margin: 0 auto;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    .layout input {
+        width : 100%;
+        margin-top: 30px;
+    }
+
+    .layout textarea {
+        width : 100%;
+        margin-top: 10px;
+        min-height: 300px;
+    }
+
+</style>
+
+<body>
+<form action="/board/writePro" method="post">
+    <div class="layout">
+        <input type="text" name="title">
+        <textarea name="content"></textarea>
+        <button type="submit">글 쓰기</button>
+    </div>
+</form>
+
+</body>
+</html>
