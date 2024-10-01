@@ -27,13 +27,14 @@
 </style>
 
 <body>
-<form action="/board/writePro" method="post">
-    <div class="layout">
-        <input type="text" name="title">
-        <textarea name="content"></textarea>
-        <button type="submit">글 쓰기</button>
-    </div>
-</form>
+    <form action="/board/writePro" method="post" enctype="multipart/form-data">
+        <div class="layout">
+            <input type="text" name="title">
+            <textarea name="content"></textarea>
+            <input type="file" name="file">
+            <button type="submit">글 쓰기</button>
+        </div>
+    </form>
 
 </body>
 </html>

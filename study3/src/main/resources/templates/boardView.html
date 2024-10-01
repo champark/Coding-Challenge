@@ -19,6 +19,7 @@
     <div class="layout">
         <h1 th:text="${board.getTitle()}"></h1>
         <p th:text="${board.getContent()}"></p>
+        <a th:href="${board.getFilepath()}">이미지보기</a>
         <form th:action="@{/board/delete/{id}(id=${board.getId()})}" method="post">
             <button type="submit">게시글 삭제</button>
         </form>
